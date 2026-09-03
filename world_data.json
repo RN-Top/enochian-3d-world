@@ -2,50 +2,123 @@
   "entities": [
     {
       "id": "throne",
-      "name": "God's Throne / The Central Seat",
-      "x": 0, "y": 25, "z": 0,
-      "size": 3.5,
+      "name": "The High Throne / Central Seat",
+      "x": 0, "y": 30, "z": 0,
+      "size": 4.0,
       "color": "#FFD700",
-      "description": "The elevated central focal point of the celestial spheres as witnessed in the vision."
+      "description": "Mysteriorum Liber: The central seat of divine presence, positioned at the highest elevation above the Great Table."
+    },
+    {
+      "id": "holy_table",
+      "name": "The Holy Table (Tabula Sancta)",
+      "x": 0, "y": 0, "z": 0,
+      "size": 3.0,
+      "color": "#FFFFFF",
+      "description": "Liber Scientiae: The central square table inscribed with the 27 Enochian letters, serving as the nexus of the Four Watchtowers."
     },
     {
       "id": "watchtower_air",
-      "name": "Watchtower of Air (Eastern Quadrant)",
-      "x": 20, "y": 0, "z": 0,
-      "size": 2.0,
+      "name": "Watchtower of Air (East)",
+      "x": 22, "y": 0, "z": 0,
+      "size": 2.5,
       "color": "#00E5FF",
-      "description": "Stationed in the Eastern quadrant of the Great Table."
+      "description": "True Great Table: The Eastern Quadrant governing the element of Air, containing the 13x12 letter grid led by King BATAIVAH."
     },
     {
       "id": "watchtower_water",
-      "name": "Watchtower of Water (Western Quadrant)",
-      "x": -20, "y": 0, "z": 0,
-      "size": 2.0,
+      "name": "Watchtower of Water (West)",
+      "x": -22, "y": 0, "z": 0,
+      "size": 2.5,
       "color": "#0055FF",
-      "description": "Stationed in the Western quadrant of the Great Table."
+      "description": "True Great Table: The Western Quadrant governing Water, containing the 13x12 grid led by King RAAGIOSL."
     },
     {
       "id": "watchtower_earth",
-      "name": "Watchtower of Earth (Northern Quadrant)",
-      "x": 0, "y": 0, "z": -20,
-      "size": 2.0,
+      "name": "Watchtower of Earth (North)",
+      "x": 0, "y": 0, "z": -22,
+      "size": 2.5,
       "color": "#22AA44",
-      "description": "Stationed in the Northern quadrant of the Great Table."
+      "description": "True Great Table: The Northern Quadrant governing Earth, containing the 13x12 grid led by King ICZHICAL."
     },
     {
       "id": "watchtower_fire",
-      "name": "Watchtower of Fire (Southern Quadrant)",
-      "x": 0, "y": 0, "z": 20,
-      "size": 2.0,
+      "name": "Watchtower of Fire (South)",
+      "x": 0, "y": 0, "z": 22,
+      "size": 2.5,
       "color": "#FF3300",
-      "description": "Stationed in the Southern quadrant of the Great Table."
+      "description": "True Great Table: The Southern Quadrant governing Fire, containing the 13x12 grid led by King EDLPRNAA."
+    },
+    {
+      "id": "black_cross",
+      "name": "The Black Cross / Union Cross",
+      "x": 0, "y": 0, "z": 0,
+      "size": 1.8,
+      "color": "#888888",
+      "description": "Tabula Recensa: The central intersecting cross separating the Four Watchtowers and binding the Great Table together."
+    },
+    {
+      "id": "angel_michael",
+      "name": "Archangel Michael (Sun / East)",
+      "x": 12, "y": 10, "z": 5,
+      "size": 1.8,
+      "color": "#FFCC00",
+      "description": "Mysteriorum Liber I: Prince of the heavenly host, associated with the Ring of Solomon and the Sun."
+    },
+    {
+      "id": "angel_gabriel",
+      "name": "Archangel Gabriel (Moon / West)",
+      "x": -12, "y": 10, "z": -5,
+      "size": 1.8,
+      "color": "#E0E0E0",
+      "description": "Mysteriorum Liber II: Minister of the visions, associated with the lunar realm and western gates."
+    },
+    {
+      "id": "angel_raphael",
+      "name": "Archangel Raphael (Mercury / South)",
+      "x": 5, "y": 10, "z": 12,
+      "size": 1.8,
+      "color": "#00FFAA",
+      "description": "Mysteriorum Liber II: Bearer of the Heptarchic power and divine wisdom."
+    },
+    {
+      "id": "angel_uriel",
+      "name": "Archangel Uriel (Venus / North)",
+      "x": -5, "y": 10, "z": -12,
+      "size": 1.8,
+      "color": "#FF00AA",
+      "description": "Mysteriorum Liber I: First spirit appearing in the stone, bringer of the Sigillum Dei Aemeth."
     }
   ],
   "aethyrs": [
-    { "level": 1, "name": "30: TEX", "radius": 4, "color": "#112233" },
-    { "level": 2, "name": "29: RII", "radius": 7, "color": "#1E3A5F" },
-    { "level": 3, "name": "28: BAG", "radius": 10, "color": "#2A5298" },
-    { "level": 15, "name": "16: LEA / 15: OXO", "radius": 22, "color": "#7B1FA2" },
-    { "level": 30, "name": "01: LIL (Outermost)", "radius": 35, "color": "#FFD700" }
+    { "level": 1, "name": "30: TEX", "radius": 5, "color": "#0D1B2A" },
+    { "level": 2, "name": "29: RII", "radius": 7, "color": "#1B263B" },
+    { "level": 3, "name": "28: BAG", "radius": 9, "color": "#415A77" },
+    { "level": 4, "name": "27: ZAA", "radius": 11, "color": "#778DA9" },
+    { "level": 5, "name": "26: DES", "radius": 13, "color": "#E0E1DD" },
+    { "level": 6, "name": "25: VTI", "radius": 15, "color": "#1F3A60" },
+    { "level": 7, "name": "24: NIA", "radius": 17, "color": "#2A4D69" },
+    { "level": 8, "name": "23: TOR", "radius": 19, "color": "#4B86B4" },
+    { "level": 9, "name": "22: LIN", "radius": 21, "color": "#63ACE5" },
+    { "level": 10, "name": "21: ASP", "radius": 23, "color": "#ADCBE3" },
+    { "level": 11, "name": "20: KHR", "radius": 25, "color": "#2B580C" },
+    { "level": 12, "name": "19: POP", "radius": 27, "color": "#639A67" },
+    { "level": 13, "name": "18: ZEN", "radius": 29, "color": "#D8EBB5" },
+    { "level": 14, "name": "17: TAN", "radius": 31, "color": "#D9BF77" },
+    { "level": 15, "name": "16: LEA", "radius": 33, "color": "#C98474" },
+    { "level": 16, "name": "15: OXO", "radius": 35, "color": "#874C62" },
+    { "level": 17, "name": "14: VTA", "radius": 37, "color": "#A7226E" },
+    { "level": 18, "name": "13: ZIM", "radius": 39, "color": "#EC2049" },
+    { "level": 19, "name": "12: LOE", "radius": 41, "color": "#F26B38" },
+    { "level": 20, "name": "11: IKH", "radius": 43, "color": "#F7DB4F" },
+    { "level": 21, "name": "10: ZAX (Choronzon Boundary)", "radius": 45, "color": "#2C3E50" },
+    { "level": 22, "name": "09: ZIP", "radius": 47, "color": "#8E44AD" },
+    { "level": 23, "name": "08: ZID", "radius": 49, "color": "#2980B9" },
+    { "level": 24, "name": "07: DEO", "radius": 51, "color": "#27AE60" },
+    { "level": 25, "name": "06: MAZ", "radius": 53, "color": "#F39C12" },
+    { "level": 26, "name": "05: LIT", "radius": 55, "color": "#D35400" },
+    { "level": 27, "name": "04: PAZ", "radius": 57, "color": "#C0392B" },
+    { "level": 28, "name": "03: ZOM", "radius": 59, "color": "#BDC3C7" },
+    { "level": 29, "name": "02: ARN", "radius": 61, "color": "#ECF0F1" },
+    { "level": 30, "name": "01: LIL (Outermost Realm)", "radius": 65, "color": "#FFD700" }
   ]
 }
