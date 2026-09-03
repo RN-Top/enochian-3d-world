@@ -2,14 +2,12 @@ import json
 import streamlit as st
 import streamlit.components.v1 as components
 
-# Page Configuration
 st.set_page_config(
-    page_title="Enochian Cosmology Visualizer",
+    page_title="Book of Enoch: Complete Entity & Heavenly World",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Load Source Data from JSON
 @st.cache_data
 def load_data():
     with open("world_data.json", "r") as f:
@@ -17,51 +15,52 @@ def load_data():
 
 data = load_data()
 
-# Sidebar Navigation
-st.sidebar.title("Manuscript Explorer")
-st.sidebar.caption("Literal mapping derived strictly from Dee & Kelley's records.")
+st.sidebar.title("📖 Book of Enoch Characters")
+st.sidebar.caption("Complete Hierarchy of Angels, Watchers, and Divine Beings")
 
 entity_names = [e["name"] for e in data["entities"]]
-selected_entity = st.sidebar.selectbox("Select Structure / Entity:", ["Show All"] + entity_names)
+selected_entity = st.sidebar.selectbox("Select Character/Entity to Inspect:", ["View All"] + entity_names)
 
-if selected_entity != "Show All":
+if selected_entity != "View All":
     item = next(e for e in data["entities"] if e["name"] == selected_entity)
-    st.sidebar.subheader("Entity Details")
-    st.sidebar.write(f"**Name:** {item['name']}")
-    st.sidebar.write(f"**Position (X,Y,Z):** ({item['x']}, {item['y']}, {item['z']})")
-    st.sidebar.info(f"**Text Citation:** {item['description']}")
+    st.sidebar.subheader("Scripture & Details")
+    st.sidebar.write(f"**Entity:** {item['name']}")
+    st.sidebar.info(f"**Manuscript Citation:** {item['scripture']}")
 
-# Prepare Data for Browser WebGL Engine
 json_payload = json.dumps(data)
 selected_payload = json.dumps(selected_entity)
 
-# WebGL 3D Embedded Code
 threejs_html = f"""
 <!DOCTYPE html>
 <html>
 <head>
     <style>
-        body {{ margin: 0; padding: 0; overflow: hidden; background-color: #020205; font-family: sans-serif; }}
-        #canvas-container {{ width: 100vw; height: 85vh; position: relative; }}
-        #controls-hint {{
+        body {{ margin: 0; padding: 0; overflow: hidden; background-color: #010103; font-family: sans-serif; }}
+        #canvas-container {{ width: 100vw; height: 88vh; position: relative; }}
+        #hud {{
             position: absolute;
-            bottom: 15px;
+            top: 15px;
             left: 15px;
-            color: #d1d5db;
-            background: rgba(0, 0, 0, 0.75);
-            padding: 8px 12px;
-            border-radius: 6px;
+            color: #ffffff;
+            background: rgba(10, 15, 30, 0.9);
+            padding: 12px 18px;
+            border-radius: 8px;
             font-size: 13px;
-            border: 1px solid #374151;
+            border: 1px solid rgba(255, 215, 0, 0.4);
             pointer-events: none;
+            max-width: 350px;
         }}
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
     <div id="canvas-container">
-        <div id="controls-hint">Rotate: Left-Click + Drag | Zoom: Scroll | Pan: Right-Click + Drag</div>
+        <div id="hud">
+            <b style="color: #ffd700;">Book of Enoch Entity Engine</b><br>
+            Left-Click: Rotate | Scroll: Zoom | Right-Click: Pan
+        </div>
     </div>
 
     <script>
@@ -70,86 +69,84 @@ threejs_html = f"""
 
         const container = document.getElementById('canvas-container');
         const scene = new THREE.Scene();
-        scene.fog = new THREE.FogExp2(0x020205, 0.008);
+        scene.fog = new THREE.FogExp2(0x010103, 0.003);
 
-        // Camera setup
         const camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 1000);
-        camera.position.set(0, 40, 70);
+        camera.position.set(0, 90, 120);
 
-        // WebGL Renderer
         const renderer = new THREE.WebGLRenderer({{ antialias: true }});
         renderer.setSize(container.clientWidth, container.clientHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.4;
         container.appendChild(renderer.domElement);
 
-        // Controls
         const controls = new THREE.OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
-        controls.dampingFactor = 0.05;
+        controls.dampingFactor = 0.04;
 
-        // Lighting
-        scene.add(new THREE.AmbientLight(0xffffff, 0.7));
-        const centralLight = new THREE.PointLight(0xffd700, 2, 120);
-        centralLight.position.set(0, 25, 0);
-        scene.add(centralLight);
+        // --- LIGHTING ENGINE ---
+        scene.add(new THREE.AmbientLight(0xffffff, 0.6));
 
-        // Grid Floor (representing the Great Table base grid)
-        const gridHelper = new THREE.GridHelper(80, 40, 0x00e5ff, 0x111827);
-        gridHelper.position.y = -10;
-        scene.add(gridHelper);
+        // Blinding divine throne light source
+        const throneLight = new THREE.PointLight(0xffffff, 4, 250);
+        throneLight.position.set(0, 100, 0);
+        scene.add(throneLight);
 
-        // Draw Spherical/Ring Layers for Æthyrs
-        worldData.aethyrs.forEach(aethyr => {{
-            const ringGeo = new THREE.RingGeometry(aethyr.radius - 0.15, aethyr.radius + 0.15, 64);
-            const ringMat = new THREE.MeshBasicMaterial({{ 
-                color: aethyr.color, 
-                side: THREE.DoubleSide, 
-                transparent: true, 
-                opacity: 0.45 
-            }});
-            const ring = new THREE.Mesh(ringGeo, ringMat);
-            ring.rotation.x = Math.PI / 2;
-            scene.add(ring);
-        }});
+        const loader = new THREE.GLTFLoader();
 
-        // Render Structures & Entities
-        const meshes = [];
+        // --- ENTITY RENDERER ---
         worldData.entities.forEach(item => {{
-            const isHighlight = (selectedTarget === item.name);
-            const geo = new THREE.SphereGeometry(item.size, 32, 32);
-            const mat = new THREE.MeshStandardMaterial({{ 
-                color: item.color, 
-                emissive: item.color,
-                emissiveIntensity: isHighlight ? 0.9 : 0.25,
-                roughness: 0.2
-            }});
-            
-            const mesh = new THREE.Mesh(geo, mat);
-            mesh.position.set(item.x, item.y, item.z);
-            
-            const pointLight = new THREE.PointLight(item.color, isHighlight ? 1.5 : 0.3, 15);
-            mesh.add(pointLight);
+            const group = new THREE.Group();
 
-            scene.add(mesh);
-            meshes.push(mesh);
+            // Try loading actual 3D GLTF asset; fallback to generated meshes
+            loader.load(
+                item.model_file,
+                function(gltf) {{
+                    const model = gltf.scene;
+                    model.position.set(item.x, item.y, item.z);
+                    model.scale.set(item.size, item.size, item.size);
+                    scene.add(model);
+                }},
+                undefined,
+                function(error) {{
+                    // Fallback visual representations if .glb model files are absent
+                    let mesh;
+                    if (item.id === "god_throne") {{
+                        const geo = new THREE.OctahedronGeometry(item.size, 2);
+                        const mat = new THREE.MeshStandardMaterial({{ color: 0xffffff, emissive: 0xffffff, emissiveIntensity: 1.0 }});
+                        mesh = new THREE.Mesh(geo, mat);
+                    }} else if (item.id === "ophanim_host") {{
+                        const geo = new THREE.TorusGeometry(item.size, 0.6, 16, 100);
+                        const mat = new THREE.MeshStandardMaterial({{ color: 0x00e5ff, wireframe: true }});
+                        mesh = new THREE.Mesh(geo, mat);
+                    }} else {{
+                        const geo = new THREE.DodecahedronGeometry(item.size, 1);
+                        const mat = new THREE.MeshStandardMaterial({{ color: item.color, emissive: item.color, emissiveIntensity: 0.4 }});
+                        mesh = new THREE.Mesh(geo, mat);
+                    }}
+                    
+                    mesh.position.set(item.x, item.y, item.z);
+                    group.add(mesh);
+                    scene.add(group);
+                }}
+            );
 
-            // Focus camera if selected from sidebar
-            if (isHighlight) {{
+            // Set Orbit Camera Focus if selected from dropdown
+            if (selectedTarget === item.name) {{
                 controls.target.set(item.x, item.y, item.z);
-                camera.position.set(item.x + 12, item.y + 12, item.z + 18);
+                camera.position.set(item.x + 15, item.y + 10, item.z + 25);
             }}
         }});
 
-        // Animation Loop
+        // --- RENDER LOOP ---
         function animate() {{
             requestAnimationFrame(animate);
-            meshes.forEach(m => {{ m.rotation.y += 0.008; }});
             controls.update();
             renderer.render(scene, camera);
         }}
         animate();
 
-        // Window Resizing
         window.addEventListener('resize', () => {{
             camera.aspect = container.clientWidth / container.clientHeight;
             camera.updateProjectionMatrix();
@@ -160,5 +157,5 @@ threejs_html = f"""
 </html>
 """
 
-st.title("Enochian Cosmological 3D Map")
-components.html(threejs_html, height=730)
+st.title("Book of Enoch: Complete Entity & Divine Hierarchy Viewer")
+components.html(threejs_html, height=750)
