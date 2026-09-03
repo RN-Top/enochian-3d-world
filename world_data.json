@@ -1,124 +1,93 @@
 {
   "entities": [
     {
-      "id": "throne",
-      "name": "The High Throne / Central Seat",
-      "x": 0, "y": 30, "z": 0,
-      "size": 4.0,
-      "color": "#FFD700",
-      "description": "Mysteriorum Liber: The central seat of divine presence, positioned at the highest elevation above the Great Table."
-    },
-    {
-      "id": "holy_table",
-      "name": "The Holy Table (Tabula Sancta)",
-      "x": 0, "y": 0, "z": 0,
-      "size": 3.0,
+      "id": "throne_glory",
+      "name": "The Great Throne of Glory (Enoch 14:18)",
+      "x": 0, "y": 35, "z": 0,
+      "size": 5.0,
       "color": "#FFFFFF",
-      "description": "Liber Scientiae: The central square table inscribed with the 27 Enochian letters, serving as the nexus of the Four Watchtowers."
+      "description": "Enoch 14:18 - 'I looked and saw therein a lofty throne; its appearance was like crystal, and the wheels thereof as the shining sun, and there was the vision of cherubim.'"
     },
     {
-      "id": "watchtower_air",
-      "name": "Watchtower of Air (East)",
-      "x": 22, "y": 0, "z": 0,
-      "size": 2.5,
+      "id": "house_crystal",
+      "name": "The Great House of Crystal & Fire (Enoch 14:10)",
+      "x": 0, "y": 20, "z": 0,
+      "size": 12.0,
       "color": "#00E5FF",
-      "description": "True Great Table: The Eastern Quadrant governing the element of Air, containing the 13x12 letter grid led by King BATAIVAH."
+      "description": "Enoch 14:10 - 'And I went into that house, and it was hot as fire and cold as ice... Its floor was of fire and its ceiling was flashing lightning and cherubim.'"
     },
     {
-      "id": "watchtower_water",
-      "name": "Watchtower of Water (West)",
-      "x": -22, "y": 0, "z": 0,
-      "size": 2.5,
-      "color": "#0055FF",
-      "description": "True Great Table: The Western Quadrant governing Water, containing the 13x12 grid led by King RAAGIOSL."
-    },
-    {
-      "id": "watchtower_earth",
-      "name": "Watchtower of Earth (North)",
-      "x": 0, "y": 0, "z": -22,
-      "size": 2.5,
-      "color": "#22AA44",
-      "description": "True Great Table: The Northern Quadrant governing Earth, containing the 13x12 grid led by King ICZHICAL."
-    },
-    {
-      "id": "watchtower_fire",
-      "name": "Watchtower of Fire (South)",
-      "x": 0, "y": 0, "z": 22,
-      "size": 2.5,
+      "id": "river_fire_1",
+      "name": "River of Flaming Fire (East)",
+      "x": 15, "y": 15, "z": 15,
+      "size": 3.0,
       "color": "#FF3300",
-      "description": "True Great Table: The Southern Quadrant governing Fire, containing the 13x12 grid led by King EDLPRNAA."
+      "description": "Enoch 14:19 - 'From underneath the throne came streams of flaming fire so that I could not look thereon.'"
     },
     {
-      "id": "black_cross",
-      "name": "The Black Cross / Union Cross",
+      "id": "river_fire_2",
+      "name": "River of Flaming Fire (West)",
+      "x": -15, "y": 15, "z": -15,
+      "size": 3.0,
+      "color": "#FF5500",
+      "description": "Enoch 71:2 - 'And I saw streams of fire, and those streams were like rivers of fire and surrounded that house.'"
+    },
+    {
+      "id": "mountain_throne",
+      "name": "Central Mountain of Alabaster (Enoch 24:1)",
       "x": 0, "y": 0, "z": 0,
-      "size": 1.8,
-      "color": "#888888",
-      "description": "Tabula Recensa: The central intersecting cross separating the Four Watchtowers and binding the Great Table together."
+      "size": 8.0,
+      "color": "#E2E8F0",
+      "description": "Enoch 24:1 - 'I went to another place of the earth, and he showed me a mountain range of fire which burnt day and night.'"
     },
     {
-      "id": "angel_michael",
-      "name": "Archangel Michael (Sun / East)",
-      "x": 12, "y": 10, "z": 5,
-      "size": 1.8,
-      "color": "#FFCC00",
-      "description": "Mysteriorum Liber I: Prince of the heavenly host, associated with the Ring of Solomon and the Sun."
+      "id": "mountain_sapphire",
+      "name": "Peak of Sapphire Stone (Enoch 24:2)",
+      "x": 25, "y": 5, "z": -25,
+      "size": 6.0,
+      "color": "#0044FF",
+      "description": "Enoch 24:2 - 'And the seventh mountain was in the midst of these, and it excelled them in height, resembling the seat of a throne: and fragrant trees encircled the throne.'"
     },
     {
-      "id": "angel_gabriel",
-      "name": "Archangel Gabriel (Moon / West)",
-      "x": -12, "y": 10, "z": -5,
-      "size": 1.8,
-      "color": "#E0E0E0",
-      "description": "Mysteriorum Liber II: Minister of the visions, associated with the lunar realm and western gates."
+      "id": "watcher_michael",
+      "name": "Archangel Michael (Enoch 20:5)",
+      "x": 18, "y": 25, "z": 10,
+      "size": 2.2,
+      "color": "#FFD700",
+      "description": "Enoch 20:5 - 'Michael, one of the holy angels, to wit, he that is set over the best part of mankind and over chaos.'"
     },
     {
-      "id": "angel_raphael",
-      "name": "Archangel Raphael (Mercury / South)",
-      "x": 5, "y": 10, "z": 12,
-      "size": 1.8,
-      "color": "#00FFAA",
-      "description": "Mysteriorum Liber II: Bearer of the Heptarchic power and divine wisdom."
+      "id": "watcher_uriel",
+      "name": "Archangel Uriel (Enoch 20:2)",
+      "x": -18, "y": 25, "z": -10,
+      "size": 2.2,
+      "color": "#FF0055",
+      "description": "Enoch 20:2 - 'Uriel, one of the holy angels, who is over the world and over Tartarus.'"
     },
     {
-      "id": "angel_uriel",
-      "name": "Archangel Uriel (Venus / North)",
-      "x": -5, "y": 10, "z": -12,
-      "size": 1.8,
-      "color": "#FF00AA",
-      "description": "Mysteriorum Liber I: First spirit appearing in the stone, bringer of the Sigillum Dei Aemeth."
+      "id": "watcher_raphael",
+      "name": "Archangel Raphael (Enoch 20:3)",
+      "x": 10, "y": 25, "z": -18,
+      "size": 2.2,
+      "color": "#00FFCC",
+      "description": "Enoch 20:3 - 'Raphael, one of the holy angels, who is over the spirits of men.'"
+    },
+    {
+      "id": "tree_life",
+      "name": "Tree of Life / Fragrant Tree (Enoch 24:4)",
+      "x": 0, "y": 8, "z": 0,
+      "size": 4.0,
+      "color": "#00FF66",
+      "description": "Enoch 24:4 - 'And as for this fragrant tree no mortal is permitted to touch it until the great judgement... Its fruit shall be for the elect.'"
     }
   ],
   "aethyrs": [
-    { "level": 1, "name": "30: TEX", "radius": 5, "color": "#0D1B2A" },
-    { "level": 2, "name": "29: RII", "radius": 7, "color": "#1B263B" },
-    { "level": 3, "name": "28: BAG", "radius": 9, "color": "#415A77" },
-    { "level": 4, "name": "27: ZAA", "radius": 11, "color": "#778DA9" },
-    { "level": 5, "name": "26: DES", "radius": 13, "color": "#E0E1DD" },
-    { "level": 6, "name": "25: VTI", "radius": 15, "color": "#1F3A60" },
-    { "level": 7, "name": "24: NIA", "radius": 17, "color": "#2A4D69" },
-    { "level": 8, "name": "23: TOR", "radius": 19, "color": "#4B86B4" },
-    { "level": 9, "name": "22: LIN", "radius": 21, "color": "#63ACE5" },
-    { "level": 10, "name": "21: ASP", "radius": 23, "color": "#ADCBE3" },
-    { "level": 11, "name": "20: KHR", "radius": 25, "color": "#2B580C" },
-    { "level": 12, "name": "19: POP", "radius": 27, "color": "#639A67" },
-    { "level": 13, "name": "18: ZEN", "radius": 29, "color": "#D8EBB5" },
-    { "level": 14, "name": "17: TAN", "radius": 31, "color": "#D9BF77" },
-    { "level": 15, "name": "16: LEA", "radius": 33, "color": "#C98474" },
-    { "level": 16, "name": "15: OXO", "radius": 35, "color": "#874C62" },
-    { "level": 17, "name": "14: VTA", "radius": 37, "color": "#A7226E" },
-    { "level": 18, "name": "13: ZIM", "radius": 39, "color": "#EC2049" },
-    { "level": 19, "name": "12: LOE", "radius": 41, "color": "#F26B38" },
-    { "level": 20, "name": "11: IKH", "radius": 43, "color": "#F7DB4F" },
-    { "level": 21, "name": "10: ZAX (Choronzon Boundary)", "radius": 45, "color": "#2C3E50" },
-    { "level": 22, "name": "09: ZIP", "radius": 47, "color": "#8E44AD" },
-    { "level": 23, "name": "08: ZID", "radius": 49, "color": "#2980B9" },
-    { "level": 24, "name": "07: DEO", "radius": 51, "color": "#27AE60" },
-    { "level": 25, "name": "06: MAZ", "radius": 53, "color": "#F39C12" },
-    { "level": 26, "name": "05: LIT", "radius": 55, "color": "#D35400" },
-    { "level": 27, "name": "04: PAZ", "radius": 57, "color": "#C0392B" },
-    { "level": 28, "name": "03: ZOM", "radius": 59, "color": "#BDC3C7" },
-    { "level": 29, "name": "02: ARN", "radius": 61, "color": "#ECF0F1" },
-    { "level": 30, "name": "01: LIL (Outermost Realm)", "radius": 65, "color": "#FFD700" }
+    { "level": 1, "name": "1st Heaven: Storehouses of Stars & Winds", "radius": 15, "color": "#1E293B" },
+    { "level": 2, "name": "2nd Heaven: Realm of the Fallen Watchers", "radius": 25, "color": "#334155" },
+    { "level": 3, "name": "3rd Heaven: Paradise & Tree of Life", "radius": 35, "color": "#10B981" },
+    { "level": 4, "name": "4th Heaven: Luminaries of Sun and Moon", "radius": 45, "color": "#F59E0B" },
+    { "level": 5, "name": "5th Heaven: Realm of the Grigori Hosts", "radius": 55, "color": "#6366F1" },
+    { "level": 6, "name": "6th Heaven: Archangels & Recording Angels", "radius": 65, "color": "#8B5CF6" },
+    { "level": 7, "name": "7th Heaven: The Divine Presence & Seraphim", "radius": 80, "color": "#FFFFFF" }
   ]
 }
