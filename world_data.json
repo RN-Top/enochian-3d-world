@@ -1,0 +1,51 @@
+{
+  "entities": [
+    {
+      "id": "throne",
+      "name": "God's Throne / The Central Seat",
+      "x": 0, "y": 25, "z": 0,
+      "size": 3.5,
+      "color": "#FFD700",
+      "description": "The elevated central focal point of the celestial spheres as witnessed in the vision."
+    },
+    {
+      "id": "watchtower_air",
+      "name": "Watchtower of Air (Eastern Quadrant)",
+      "x": 20, "y": 0, "z": 0,
+      "size": 2.0,
+      "color": "#00E5FF",
+      "description": "Stationed in the Eastern quadrant of the Great Table."
+    },
+    {
+      "id": "watchtower_water",
+      "name": "Watchtower of Water (Western Quadrant)",
+      "x": -20, "y": 0, "z": 0,
+      "size": 2.0,
+      "color": "#0055FF",
+      "description": "Stationed in the Western quadrant of the Great Table."
+    },
+    {
+      "id": "watchtower_earth",
+      "name": "Watchtower of Earth (Northern Quadrant)",
+      "x": 0, "y": 0, "z": -20,
+      "size": 2.0,
+      "color": "#22AA44",
+      "description": "Stationed in the Northern quadrant of the Great Table."
+    },
+    {
+      "id": "watchtower_fire",
+      "name": "Watchtower of Fire (Southern Quadrant)",
+      "x": 0, "y": 0, "z": 20,
+      "size": 2.0,
+      "color": "#FF3300",
+      "description": "Stationed in the Southern quadrant of the Great Table."
+    }
+  ],
+  "aethyrs": [
+    { "level": 1, "name": "30: TEX", "radius": 4, "color": "#112233" },
+    { "level": 2, "name": "29: RII", "radius": 7, "color": "#1E3A5F" },
+    { "level": 3, "name": "28: BAG", "radius": 10, "color": "#2A5298" },
+    { "level": 15, "name": "16: LEA / 15: OXO", "radius": 22, "color": "#7B1FA2" },
+    { "level": 30, "name": "01: LIL (Outermost)", "radius": 35, "color": "#FFD700" }
+  ]
+}
