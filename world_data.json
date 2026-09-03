@@ -1,93 +1,112 @@
 {
   "entities": [
     {
-      "id": "throne_glory",
-      "name": "The Great Throne of Glory (Enoch 14:18)",
-      "x": 0, "y": 35, "z": 0,
-      "size": 5.0,
-      "color": "#FFFFFF",
-      "description": "Enoch 14:18 - 'I looked and saw therein a lofty throne; its appearance was like crystal, and the wheels thereof as the shining sun, and there was the vision of cherubim.'"
-    },
-    {
-      "id": "house_crystal",
-      "name": "The Great House of Crystal & Fire (Enoch 14:10)",
-      "x": 0, "y": 20, "z": 0,
-      "size": 12.0,
-      "color": "#00E5FF",
-      "description": "Enoch 14:10 - 'And I went into that house, and it was hot as fire and cold as ice... Its floor was of fire and its ceiling was flashing lightning and cherubim.'"
-    },
-    {
-      "id": "river_fire_1",
-      "name": "River of Flaming Fire (East)",
-      "x": 15, "y": 15, "z": 15,
-      "size": 3.0,
-      "color": "#FF3300",
-      "description": "Enoch 14:19 - 'From underneath the throne came streams of flaming fire so that I could not look thereon.'"
-    },
-    {
-      "id": "river_fire_2",
-      "name": "River of Flaming Fire (West)",
-      "x": -15, "y": 15, "z": -15,
-      "size": 3.0,
-      "color": "#FF5500",
-      "description": "Enoch 71:2 - 'And I saw streams of fire, and those streams were like rivers of fire and surrounded that house.'"
-    },
-    {
-      "id": "mountain_throne",
-      "name": "Central Mountain of Alabaster (Enoch 24:1)",
-      "x": 0, "y": 0, "z": 0,
-      "size": 8.0,
-      "color": "#E2E8F0",
-      "description": "Enoch 24:1 - 'I went to another place of the earth, and he showed me a mountain range of fire which burnt day and night.'"
-    },
-    {
-      "id": "mountain_sapphire",
-      "name": "Peak of Sapphire Stone (Enoch 24:2)",
-      "x": 25, "y": 5, "z": -25,
+      "id": "god_throne",
+      "name": "The Great Glory on the Crystal Throne (Enoch 14:18-22)",
+      "x": 0, "y": 100, "z": 0,
       "size": 6.0,
-      "color": "#0044FF",
-      "description": "Enoch 24:2 - 'And the seventh mountain was in the midst of these, and it excelled them in height, resembling the seat of a throne: and fragrant trees encircled the throne.'"
+      "color": "#FFFFFF",
+      "model_file": "assets/throne.glb",
+      "scripture": "Enoch 14:20 — 'The Great Glory sat thereon, and His raiment shone more brightly than the sun and was whiter than any snow.'"
     },
     {
-      "id": "watcher_michael",
-      "name": "Archangel Michael (Enoch 20:5)",
-      "x": 18, "y": 25, "z": 10,
-      "size": 2.2,
+      "id": "seraphim_host",
+      "name": "The Seraphim — Six-Winged Fiery Spirits (Enoch 61:10, 71:7)",
+      "x": 10, "y": 105, "z": 10,
+      "size": 3.0,
+      "color": "#FF2200",
+      "model_file": "assets/seraphim.glb",
+      "scripture": "Enoch 71:7 — 'And round about were Seraphim, Cherubim, and Ophanim: these are they who sleep not and guard the throne of His glory.'"
+    },
+    {
+      "id": "cherubim_host",
+      "name": "The Cherubim (Enoch 14:11, 71:7)",
+      "x": -10, "y": 105, "z": -10,
+      "size": 3.0,
       "color": "#FFD700",
-      "description": "Enoch 20:5 - 'Michael, one of the holy angels, to wit, he that is set over the best part of mankind and over chaos.'"
+      "model_file": "assets/cherubim.glb",
+      "scripture": "Enoch 14:11 — 'And the ceiling was like the path of the stars and the lightnings, and between them were fiery cherubim.'"
     },
     {
-      "id": "watcher_uriel",
-      "name": "Archangel Uriel (Enoch 20:2)",
-      "x": -18, "y": 25, "z": -10,
-      "size": 2.2,
+      "id": "ophanim_host",
+      "name": "The Ophanim — Wheels of Eyes (Enoch 61:10, 71:7)",
+      "x": 0, "y": 92, "z": 0,
+      "size": 5.0,
+      "color": "#00E5FF",
+      "model_file": "assets/ophanim.glb",
+      "scripture": "Enoch 61:10 — 'And all the host of the heavens, and all the holy ones above... the Cherubim, the Seraphim, and the Ophanim.'"
+    },
+    {
+      "id": "archangel_michael",
+      "name": "Archangel Michael (Enoch 20:5, 71:3)",
+      "x": 20, "y": 95, "z": 20,
+      "size": 2.5,
+      "color": "#FFD700",
+      "model_file": "assets/michael.glb",
+      "scripture": "Enoch 20:5 — 'Michael, one of the holy angels, set over the best part of mankind and over chaos.'"
+    },
+    {
+      "id": "archangel_uriel",
+      "name": "Archangel Uriel (Enoch 20:2, 19:1)",
+      "x": -20, "y": 95, "z": -20,
+      "size": 2.5,
       "color": "#FF0055",
-      "description": "Enoch 20:2 - 'Uriel, one of the holy angels, who is over the world and over Tartarus.'"
+      "model_file": "assets/uriel.glb",
+      "scripture": "Enoch 20:2 — 'Uriel, one of the holy angels, who is over the world and over Tartarus.'"
     },
     {
-      "id": "watcher_raphael",
-      "name": "Archangel Raphael (Enoch 20:3)",
-      "x": 10, "y": 25, "z": -18,
-      "size": 2.2,
+      "id": "archangel_raphael",
+      "name": "Archangel Raphael (Enoch 20:3, 10:4)",
+      "x": 20, "y": 95, "z": -20,
+      "size": 2.5,
       "color": "#00FFCC",
-      "description": "Enoch 20:3 - 'Raphael, one of the holy angels, who is over the spirits of men.'"
+      "model_file": "assets/raphael.glb",
+      "scripture": "Enoch 20:3 — 'Raphael, one of the holy angels, who is over the spirits of men.'"
     },
     {
-      "id": "tree_life",
-      "name": "Tree of Life / Fragrant Tree (Enoch 24:4)",
-      "x": 0, "y": 8, "z": 0,
-      "size": 4.0,
+      "id": "archangel_gabriel",
+      "name": "Archangel Gabriel (Enoch 20:7, 10:9)",
+      "x": -20, "y": 95, "z": 20,
+      "size": 2.5,
+      "color": "#FFFFFF",
+      "model_file": "assets/gabriel.glb",
+      "scripture": "Enoch 20:7 — 'Gabriel, one of the holy angels, who is over Paradise, the serpents, and the Cherubim.'"
+    },
+    {
+      "id": "archangel_phanuel",
+      "name": "Archangel Phanuel (Enoch 40:9)",
+      "x": 0, "y": 95, "z": 30,
+      "size": 2.5,
+      "color": "#AA00FF",
+      "model_file": "assets/phanuel.glb",
+      "scripture": "Enoch 40:9 — 'And the fourth, who is set over the repentance unto hope of those who inherit eternal life, is named Phanuel.'"
+    },
+    {
+      "id": "watcher_semyaza",
+      "name": "Semyaza — Leader of Fallen Watchers (Enoch 6:3, 10:11)",
+      "x": 35, "y": 20, "z": 35,
+      "size": 3.0,
+      "color": "#4A5568",
+      "model_file": "assets/semyaza.glb",
+      "scripture": "Enoch 6:3 — 'And Semjaza, who was their leader, said unto them: I fear ye will not indeed agree to do this deed.'"
+    },
+    {
+      "id": "watcher_azazel",
+      "name": "Azazel — Bound in Dudael Darkness (Enoch 8:1, 10:4)",
+      "x": -35, "y": 15, "z": -35,
+      "size": 3.0,
+      "color": "#1A202C",
+      "model_file": "assets/azazel.glb",
+      "scripture": "Enoch 10:4 — 'Bind Azazel hand and foot, and cast him into the darkness: and make an opening in the desert, which is in Dudael, and cast him therein.'"
+    },
+    {
+      "id": "enoch_prophet",
+      "name": "Enoch the Scribe (Enoch 12:3, 14:24)",
+      "x": 0, "y": 80, "z": 40,
+      "size": 1.8,
       "color": "#00FF66",
-      "description": "Enoch 24:4 - 'And as for this fragrant tree no mortal is permitted to touch it until the great judgement... Its fruit shall be for the elect.'"
+      "model_file": "assets/enoch.glb",
+      "scripture": "Enoch 14:24 — 'And the Lord called me with His own mouth, and said to me: Come hither, Enoch, and hear my word.'"
     }
-  ],
-  "aethyrs": [
-    { "level": 1, "name": "1st Heaven: Storehouses of Stars & Winds", "radius": 15, "color": "#1E293B" },
-    { "level": 2, "name": "2nd Heaven: Realm of the Fallen Watchers", "radius": 25, "color": "#334155" },
-    { "level": 3, "name": "3rd Heaven: Paradise & Tree of Life", "radius": 35, "color": "#10B981" },
-    { "level": 4, "name": "4th Heaven: Luminaries of Sun and Moon", "radius": 45, "color": "#F59E0B" },
-    { "level": 5, "name": "5th Heaven: Realm of the Grigori Hosts", "radius": 55, "color": "#6366F1" },
-    { "level": 6, "name": "6th Heaven: Archangels & Recording Angels", "radius": 65, "color": "#8B5CF6" },
-    { "level": 7, "name": "7th Heaven: The Divine Presence & Seraphim", "radius": 80, "color": "#FFFFFF" }
   ]
 }
